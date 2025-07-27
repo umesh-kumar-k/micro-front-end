@@ -1,0 +1,4 @@
+tui-app-bar {
+    box-shadow: var(--tui-shadow-small);
+    margin-block-end: 1rem;
+}

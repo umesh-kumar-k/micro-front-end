@@ -1,0 +1,33 @@
+<div class="flex flex-col gap-[20px]">
+  <h1 class="text-3xl font-bold text-center">Items in Cart</h1>
+  <ng-container *ngIf="(itemsInCart$ | async) as itemsInCart; else noItemsTemplate">  
+    <table
+        tuiTable
+        class="table"
+        [columns]="columns()">
+            <thead>
+                <tr tuiThGroup>
+                    <th tuiTh>Name</th>
+                    <th tuiTh>Price</th>
+                </tr>
+            </thead>
+            <tbody
+                tuiTbody
+                [data]="itemsInCart"
+            >
+                <tr
+                    *ngFor="let product of itemsInCart"
+                    tuiTr
+                >       
+                    <td tuiTd>{{product.title}}</td>
+                    <td tuiTd>{{product.price | tuiFormatNumber}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+<ng-template #noItemsTemplate>
+  <div class="text-center">No items in cart.</div>
+</ng-template>
+</div>
+
+    
