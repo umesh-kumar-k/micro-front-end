@@ -1,0 +1,38 @@
+<div class="w-[400px] h-[450px] p-4 m-2 border rounded-lg ">
+    <div class="h-[440px] flex flex-col">
+        <div tuiAppearance="floating" tuiCardLarge class="h-6/10 p-2">
+            <header tuiHeader>
+                <h4 tuiTitle>{{product().title}}</h4>
+            </header>
+                  <img [src]="product().thumbnail" alt="Sample" class="w-full h-full object-contain" />
+        </div>
+        <div class="h-2/10 p-2">
+            <p>{{product().description}}</p>
+        </div>
+        <div class="h-2/10 p-2">
+            <div class="flex gap-2">
+                <button
+                    class="w-1/2"
+                    (click)="addProductToCartBtnHandler()"
+                    appearance="primary"
+                    size="m"
+                    tuiButton
+                    type="button"
+                >
+                    Add to Cart
+                </button>
+                <button
+                    class="w-1/2"
+                    (click)="showReviewsBtnHandler()"
+                    appearance="secondary"
+                    size="m"
+                    tuiButton
+                    type="button"
+                >
+                    See Reviews
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

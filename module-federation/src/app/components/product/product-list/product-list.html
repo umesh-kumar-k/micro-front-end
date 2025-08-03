@@ -1,0 +1,5 @@
+<div class="flex flex-row flex-wrap">
+    @for (product of products(); track product.id) {
+        <product-detail class="p-4 m-2" [product]="product"></product-detail>
+    }
+</div>
