@@ -1,0 +1,107 @@
+
+
+create a project 
+
+ng new module-federation
+
+✔ Do you want to create a 'zoneless' application without zone.js (Developer Preview)? No
+✔ Which stylesheet format would you like to use? CSS             [ https://developer.mozilla.org/docs/Web/CSS                     ]
+✔ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? No
+
+https://www.angulararchitects.io/en/blog/the-microfrontend-revolution-part-2-module-federation-with-angular/
+
+cd native-federation
+
+ng add @angular-architects/module-federation --project module-federation --port 4200 --type host
+
+
+✔ Which stack do you want to use? Module Federation with webpack (classic)
+CREATE webpack.prod.config.js (46 bytes)
+CREATE webpack.config.js (336 bytes)
+CREATE src/bootstrap.ts (222 bytes)
+UPDATE tsconfig.json (753 bytes)
+UPDATE tsconfig.app.json (190 bytes)
+UPDATE angular.json (2377 bytes)
+UPDATE package.json (1331 bytes)
+UPDATE src/main.ts (58 bytes)
+✔ Packages installed successfully.
+
+
+ng generate application mfe-reviews
+✔ Which stylesheet format would you like to use? CSS             [ https://developer.mozilla.org/docs/Web/CSS                     ]
+✔ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? No
+✔ Do you want to create a 'zoneless' application without zone.js (Developer Preview)? No
+CREATE projects/mfe-reviews/src/app/app.css (0 bytes)
+CREATE projects/mfe-reviews/src/app/app.spec.ts (669 bytes)
+CREATE projects/mfe-reviews/src/app/app.ts (293 bytes)
+CREATE projects/mfe-reviews/src/app/app.html (20122 bytes)
+CREATE projects/mfe-reviews/src/main.ts (222 bytes)
+CREATE projects/mfe-reviews/src/app/app.config.ts (400 bytes)
+CREATE projects/mfe-reviews/src/app/app.routes.ts (77 bytes)
+CREATE projects/mfe-reviews/tsconfig.app.json (437 bytes)
+CREATE projects/mfe-reviews/tsconfig.spec.json (416 bytes)
+CREATE projects/mfe-reviews/public/favicon.ico (15086 bytes)
+CREATE projects/mfe-reviews/src/index.html (296 bytes)
+CREATE projects/mfe-reviews/src/styles.css (80 bytes)
+UPDATE angular.json (4840 bytes)
+UPDATE tsconfig.json (894 bytes)
+✔ Packages installed successfully.
+
+
+ng add @angular-architects/module-federation --project mfe-reviews --port 4201 --type remote
+Skipping installation: Package already installed
+✔ Which stack do you want to use? Module Federation with webpack (classic)
+CREATE projects/mfe-reviews/webpack.prod.config.js (46 bytes)
+CREATE projects/mfe-reviews/webpack.config.js (364 bytes)
+CREATE projects/mfe-reviews/src/bootstrap.ts (222 bytes)
+UPDATE tsconfig.json (894 bytes)
+UPDATE projects/mfe-reviews/tsconfig.app.json (198 bytes)
+UPDATE angular.json (4856 bytes)
+UPDATE package.json (1331 bytes)
+UPDATE projects/mfe-reviews/src/main.ts (58 bytes)
+✔ Packages installed successfully.
+
+
+ng generate application mfe-recommendations
+✔ Which stylesheet format would you like to use? CSS             [ https://developer.mozilla.org/docs/Web/CSS                     ]
+✔ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? No
+✔ Do you want to create a 'zoneless' application without zone.js (Developer Preview)? No
+CREATE projects/mfe-recommendations/src/app/app.css (0 bytes)
+CREATE projects/mfe-recommendations/src/app/app.spec.ts (677 bytes)
+CREATE projects/mfe-recommendations/src/app/app.ts (301 bytes)
+CREATE projects/mfe-recommendations/src/app/app.html (20122 bytes)
+CREATE projects/mfe-recommendations/src/main.ts (222 bytes)
+CREATE projects/mfe-recommendations/src/app/app.config.ts (400 bytes)
+CREATE projects/mfe-recommendations/src/app/app.routes.ts (77 bytes)
+CREATE projects/mfe-recommendations/tsconfig.app.json (437 bytes)
+CREATE projects/mfe-recommendations/tsconfig.spec.json (416 bytes)
+CREATE projects/mfe-recommendations/public/favicon.ico (15086 bytes)
+CREATE projects/mfe-recommendations/src/index.html (304 bytes)
+CREATE projects/mfe-recommendations/src/styles.css (80 bytes)
+UPDATE angular.json (7415 bytes)
+UPDATE tsconfig.json (1051 bytes)
+✔ Packages installed successfully.
+
+
+ng add @angular-architects/module-federation --project mfe-recommendations --port 4202 --type remote
+Skipping installation: Package already installed
+✔ Which stack do you want to use? Module Federation with webpack (classic)
+CREATE projects/mfe-recommendations/webpack.prod.config.js (46 bytes)
+CREATE projects/mfe-recommendations/webpack.config.js (380 bytes)
+CREATE projects/mfe-recommendations/src/bootstrap.ts (222 bytes)
+UPDATE tsconfig.json (1051 bytes)
+UPDATE projects/mfe-recommendations/tsconfig.app.json (198 bytes)
+UPDATE angular.json (7479 bytes)
+UPDATE package.json (1331 bytes)
+UPDATE projects/mfe-recommendations/src/main.ts (58 bytes)
+✔ Packages installed successfully.
+
+copy the source files from app to the shell project
+install the required deps (taiga ui components)
+
+npm install
+
+changes to styles.css for tailwind.css 
+changes to angular.json for taiga ui
+
+
