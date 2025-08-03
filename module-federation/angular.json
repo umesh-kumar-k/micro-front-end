@@ -99,6 +99,200 @@
 					}
 				}
 			}
+		},
+		"mfe-reviews": {
+			"projectType": "application",
+			"schematics": {},
+			"root": "projects/mfe-reviews",
+			"sourceRoot": "projects/mfe-reviews/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/mfe-reviews/tsconfig.app.json",
+						"assets": [
+							{
+								"glob": "**/*",
+								"input": "projects/mfe-reviews/public",
+								"output": "."
+							}
+						],
+						"styles": [
+							"projects/mfe-reviews/src/styles.css"
+						],
+						"main": "projects/mfe-reviews/src/main.ts",
+						"outputPath": "dist/mfe-reviews",
+						"index": "projects/mfe-reviews/src/index.html",
+						"extraWebpackConfig": "projects/mfe-reviews/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kB",
+									"maximumError": "1MB"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "4kB",
+									"maximumError": "8kB"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/mfe-reviews/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "mfe-reviews:build:production",
+							"extraWebpackConfig": "projects/mfe-reviews/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "mfe-reviews:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4201,
+						"publicHost": "http://localhost:4201",
+						"extraWebpackConfig": "projects/mfe-reviews/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular/build:extract-i18n"
+				},
+				"test": {
+					"builder": "@angular/build:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/mfe-reviews/tsconfig.spec.json",
+						"assets": [
+							{
+								"glob": "**/*",
+								"input": "projects/mfe-reviews/public"
+							}
+						],
+						"styles": [
+							"projects/mfe-reviews/src/styles.css"
+						]
+					}
+				}
+			}
+		},
+		"mfe-recommendations": {
+			"projectType": "application",
+			"schematics": {},
+			"root": "projects/mfe-recommendations",
+			"sourceRoot": "projects/mfe-recommendations/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/mfe-recommendations/tsconfig.app.json",
+						"assets": [
+							{
+								"glob": "**/*",
+								"input": "projects/mfe-recommendations/public",
+								"output": "."
+							}
+						],
+						"styles": [
+							"projects/mfe-recommendations/src/styles.css"
+						],
+						"main": "projects/mfe-recommendations/src/main.ts",
+						"outputPath": "dist/mfe-recommendations",
+						"index": "projects/mfe-recommendations/src/index.html",
+						"extraWebpackConfig": "projects/mfe-recommendations/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kB",
+									"maximumError": "1MB"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "4kB",
+									"maximumError": "8kB"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/mfe-recommendations/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "mfe-recommendations:build:production",
+							"extraWebpackConfig": "projects/mfe-recommendations/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "mfe-recommendations:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4202,
+						"publicHost": "http://localhost:4202",
+						"extraWebpackConfig": "projects/mfe-recommendations/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular/build:extract-i18n"
+				},
+				"test": {
+					"builder": "@angular/build:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/mfe-recommendations/tsconfig.spec.json",
+						"assets": [
+							{
+								"glob": "**/*",
+								"input": "projects/mfe-recommendations/public"
+							}
+						],
+						"styles": [
+							"projects/mfe-recommendations/src/styles.css"
+						]
+					}
+				}
+			}
 		}
 	},
 	"cli": {

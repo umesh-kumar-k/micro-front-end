@@ -27,6 +27,18 @@
     },
     {
       "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe-reviews/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe-reviews/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/mfe-recommendations/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/mfe-recommendations/tsconfig.spec.json"
     }
   ]
 }
